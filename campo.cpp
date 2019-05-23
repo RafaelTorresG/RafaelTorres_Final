@@ -44,8 +44,8 @@ int main()
      
  for(int t=1; t<100; t++)
  {
-  Vx[t]=k*Ex[t];
-  Vy[t]=k*Ey[t];
+  Vx[t]=k*Ex[t]+Vx[t-1];
+  Vy[t]=k*Ey[t]+Vy[t-1];
      
   X[t]=k*Vx[t]+X[t-1];
   Y[t]=k*Vy[t]+Y[t-1];
